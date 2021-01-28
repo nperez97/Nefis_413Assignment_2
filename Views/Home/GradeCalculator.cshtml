@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Grade Calculator";
+}
+
+@model Nefis_413Assignment_2.Models.GradeCalcModel
+
+<body>
+    <div class="text-center">
+        <form method="post">
+            <fieldset>
+                <legend>Grade Calculator:</legend>
+
+                <label>Assignments:</label>
+                <br />
+                <input type="number" id="assignment" asp-for="assignment" placeholder="0 - 100"><br>
+                <span asp-validation-for="assignment" style="color:red;"></span><br><br>
+
+                <label>Group Project:</label>
+                <br />
+                <input type="number" id="project" asp-for="project" placeholder="0 - 100"><br>
+                <span asp-validation-for="project" style="color:red;"></span><br><br>
+
+                <label>Quizzes:</label>
+                <br />
+                <input type="number" id="quizzes" asp-for="quizzes" placeholder="0 - 100"><br>
+                <span asp-validation-for="quizzes" style="color:red;"></span><br><br>
+
+                <label>Exams:</label>
+                <br />
+                <input type="number" id="exams" asp-for="exams" placeholder="0 - 100"><br>
+                <span asp-validation-for="exams" style="color:red;"></span><br><br>
+
+
+                <label>INTEX:</label>
+                <br />
+                <input type="number" id="intex" asp-for="intex" placeholder="0 - 100"><br>
+                <span asp-validation-for="intex" style="color:red;"></span><br><br>
+                <br><br>
+                <input type="submit" value="Submit" id="submitButton" onclick="gradeCalc()">
+            </fieldset>
+            <div asp-validation-summary="All" style="color:red;"></div>
+        </form>
+    </div>
+</body>
